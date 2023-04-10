@@ -91,11 +91,11 @@ const updatePosition = (username, positionX, positionY, positionZ) => {
         return false;
     }
 };
-const changePassword = async (username, oldPassword, newPassword) => {
+const changePassword = async (username, oldpassword, newpassword) => {
     try {
         let user = await userModel.findOne({ username });
-        if (user && oldPassword == user.password) {
-            user.password = newPassword;
+        if (user && oldpassword == user.password) {
+            user.password = newpassword;
             await user.save();
             return true;
         }

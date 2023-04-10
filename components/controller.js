@@ -32,9 +32,9 @@ const savePosition = async (username, positionX, positionY, positionZ) => {
         throw error;
     }
 };
-const changePassword = async (username, oldPassword, newPassword) => { 
+const changePassword = async (username, oldpassword, newpassword) => { 
     try {
-        return await userServices.changePassword(username, oldPassword, newPassword);
+        return await userServices.changePassword(username, oldpassword, newpassword);
     } catch (error) {
         console.log('User service changePassword error: ',error);
         throw error;
